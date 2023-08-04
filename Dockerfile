@@ -9,4 +9,5 @@ COPY ./ /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD [ "python", "./manage.py runserver 9000"]
+#CMD [ "python", "./manage.py runserver 9000"]
+RUN [ "sh", "-c", "echo $HOME" ]
