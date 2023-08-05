@@ -67,4 +67,4 @@ jobs:
           script: |
             docker stop pydjangolearning || true && docker rmi dimonpc2010/pydjangolearning
             docker pull dimonpc2010/pydjangolearning:latest
-            docker run -d -e DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} -e ALLOWED_HOSTS=${{ secrets.GCP_PY_BOT_HOST }} --rm --name pydjangolearning -p 9000:9000 dimonpc2010/pydjangolearning
+            docker run -d -e DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} -e ALLOWED_HOSTS=${{ secrets.ALLOWED_HOST }} --rm --name pydjangolearning -p 9000:9000 dimonpc2010/pydjangolearning
